@@ -23,6 +23,7 @@
           <th>No. of Bedrooms</th>
           <th>No. of Bathrooms</th>
           <th>Have Garage</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -33,6 +34,9 @@
           <td>{{ appartment.number_of_bedrooms }}</td>
           <td>{{ appartment.number_of_bathrooms }}</td>
           <td>{{ "Yes" if appartment.does_have_garage else "No" }}</td>
+          <td>
+            <a href="/appartments/{{appartment.id}}/view"> View Details</a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
