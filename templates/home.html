@@ -23,7 +23,7 @@
           <th>No. of Bedrooms</th>
           <th>No. of Bathrooms</th>
           <th>Have Garage</th>
-          <th></th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +36,23 @@
           <td>{{ "Yes" if appartment.does_have_garage else "No" }}</td>
           <td>
             <a href="/appartments/{{appartment.id}}/view"> View Details</a>
+            {% if appartment.is_available %}
+            <a
+              href="/appartments/{{ appartment.id }}/put-on-rent"
+              class="btn btn-primary"
+              >Put on Rent</a
+            >
+            {% else %}
+            <form
+              action="/appartments/{{ appartment.id }}/make-available-for-rent"
+              method="post"
+            >
+              <button type="submit" class="btn btn-primary">
+                Make Available for Rent
+              </button>
+            </form>
+
+            {% endif %}
           </td>
         </tr>
         {% endfor %}

@@ -1,0 +1,3 @@
+Appartment complex tracker is a project that allows the complex representative to manage the appartments that are available for rent or have been put on rent easily.
+
+Through this project a user can see all the appartments with their status (available for rent or not). A representative can add any new appartment info available to them, they can add the owner contact details and can also put it on rent. Any time they can end the rent period if tenant leaves early which will make the appartment available for rent to others. They can also see the rent history for analysis purpose.

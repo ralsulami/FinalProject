@@ -41,6 +41,26 @@
         >
       </p>
       {% endif %}
+
+      <h2>Rent History</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>From Date</th>
+            <th>To Date</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for rent in rent_history %}
+          <tr>
+            <td>{{ rent.from_date }}</td>
+            <td>{{ rent.to_date }}</td>
+            <td>{{ rent.price }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
 
     <script

@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS rent_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     from_date DATE NOT NULL,
     to_date DATE NOT NULL,
-    price REAL NOT NULL,
+    price REAL,
     appartment_id INTEGER,
     -- Foreign key constraint
     FOREIGN KEY (appartment_id) REFERENCES appartments(id)
